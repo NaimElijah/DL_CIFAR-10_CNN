@@ -1,4 +1,4 @@
-"""CIFAR-10 data loading, shared by all tasks.
+"""CIFAR-10 data loading, shared by all stages/files.
 
 Follows the PyTorch CIFAR-10 blitz tutorial: ToTensor + Normalize to [-1, 1]
 with mean/std of 0.5 per channel.

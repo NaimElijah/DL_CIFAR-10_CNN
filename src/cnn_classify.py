@@ -1,4 +1,4 @@
-"""Task 1: CIFAR-10 classification with the tutorial CNN.
+""" CIFAR-10 classification with the tutorial CNN.
 
 Trains the network, then reports everything the assignment asks for:
   - training accuracy
@@ -111,8 +111,8 @@ def save_sample_predictions(net, loader, device, n=8, path=None):
                 fontsize=10, color=("green" if correct else "red"))
         ax.axis("off")
     fig.tight_layout()
-    # Save the figure; default path is figures/task1_sample_predictions.png.
-    path = path or os.path.join(FIG_DIR, "task1_sample_predictions.png")
+    # Save the figure; default path is figures/classify_sample_predictions.png.
+    path = path or os.path.join(FIG_DIR, "classify_sample_predictions.png")
     # Save with a higher DPI and tight bounding box to reduce whitespace around the images.
     fig.savefig(path, dpi=150, bbox_inches="tight")
     plt.close(fig)

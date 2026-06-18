@@ -2,8 +2,6 @@
 
 CNN classification, joint reconstruction, and latent-channel analysis on CIFAR-10 — Assignment 4 for *Applied Deep Learning* (Spring 2026).
 
-**Authors:** Ron Kadosh, Naim Elijah
-
 Full write-up with figures and discussion: [`docs/report.pdf`](docs/report.pdf).
 
 ## Overview
@@ -43,9 +41,9 @@ The project starts from the standard PyTorch CIFAR-10 tutorial CNN and extends i
 ├── src/
 │   ├── data.py              # CIFAR-10 loading, normalization, unnormalize() for plotting
 │   ├── model.py              # Net (classifier) and DeconvNet (classifier + decoder)
-│   ├── cnn_classify.py       # Task 1: train & evaluate Net
-│   ├── cnn_deconv.py         # Task 2: train & evaluate DeconvNet (joint loss)
-│   └── cnn_latent_repr.py    # Task 3: per-channel latent decoding
+│   ├── cnn_classify.py       # Train & evaluate Net
+│   ├── cnn_deconv.py         # Train & evaluate DeconvNet (joint loss)
+│   └── cnn_latent_repr.py    # Per-channel latent decoding
 └── docs/
     └── report.pdf            # Write-up with full results and figures
 ```
@@ -95,3 +93,6 @@ Common flags: `--subset N` keeps every Nth image (e.g. `--subset 10` for a ~6,00
 **Task 3:** `z(1)` channels behave as low-level edge/luminance/color detectors that still preserve spatial layout (14×14). `z(2)` channels are far coarser (5×5) and encode abstract, distributed figure-ground structure — no single channel reconstructs the image alone, consistent with the usual CNN feature hierarchy.
 
 See the report for full per-class accuracy tables and figures.
+
+## License
+This project was done for learning & experimenting purposes.

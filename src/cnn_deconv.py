@@ -143,7 +143,7 @@ def save_accuracy_curves(history, lam, path=None):
     ax2.legend(lines, [l.get_label() for l in lines], loc="upper right")
 
     fig.tight_layout()
-    path = path or os.path.join(FIG_DIR, "task2_accuracy_curves.png")
+    path = path or os.path.join(FIG_DIR, "cnn_accuracy_curves.png")
     fig.savefig(path, dpi=150, bbox_inches="tight")
     plt.close(fig)
     print(f"Saved accuracy curves to {path}")
@@ -171,7 +171,7 @@ def save_reconstructions(net, loader, device, n=4, path=None):
     fig.text(0.02, 0.28, "reconstruction", rotation=90, va="center", size=13)
 
     fig.tight_layout(rect=(0.04, 0, 1, 1))
-    path = path or os.path.join(FIG_DIR, "task2_reconstructions.png")
+    path = path or os.path.join(FIG_DIR, "cnn_reconstructions.png")
     fig.savefig(path, dpi=150, bbox_inches="tight")
     plt.close(fig)
     print(f"Saved reconstructions to {path}")
